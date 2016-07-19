@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export DIR="/var/tmp/.wallpaper"
+export FILE="$DIR/bg.jpg"
+
+if [ ! -d "$DIR" ]; then
+       cp -R ./.wallpaper "$DIR"
+fi
+
+gsettings set org.gnome.desktop.background picture-uri file:///$FILE
